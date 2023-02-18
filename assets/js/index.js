@@ -29,6 +29,7 @@ function getUserInfo() {
         return layui.layer.msg('获取用户信息失败')
       }
       // 调用renderAvatar渲染用户头像
+      //
       renderAvatar(res.data)
     },
     // complete: function (res) {

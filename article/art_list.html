@@ -62,8 +62,14 @@
         <td>{{$value.pub_date|dataFormat}}</td>
         <td>{{$value.state}}</td>
         <td>
-          <button type="button" class="layui-btn layui-btn-xs">编辑</button>
-          <button type="button" class="layui-btn layui-btn-danger layui-btn-xs btn-delete" data-id="{{$value.Id}}">删除</button>
+          <button type="button" class="layui-btn layui-btn-xs btn-edit">编辑</button>
+          <button
+            type="button"
+            class="layui-btn layui-btn-danger layui-btn-xs btn-delete"
+            data-id="{{$value.Id}}"
+          >
+            删除
+          </button>
         </td>
       </tr>
       {{/each}}
@@ -74,9 +80,9 @@
       <option value="">所有分类</option>
       {{each data}}
       <option value="{{$value.Id}}">{{$value.name}}</option>
+
       {{/each}}
     </script>
-
     <!-- 导入第三方的 JS 插件 -->
     <script src="/assets/lib/layui/layui.all.js"></script>
     <script src="/assets/lib/jquery.js"></script>
